@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration SYSTEM "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- JDBC Connection Properties -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/hibernatedb</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">root</property>
+
+        <!-- Hibernate Settings-->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="show_sql">true</property>    <!-- to see sql query-->
+
+        <property name="hbm2ddl.auto">update</property>  <!-- To automatic creation of table-->
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Enable 2nd level EH cache -->
+       <!-- <property name="hibernate.cache.use_second_level_cache">true</property>
+        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+        <property name="hibernate.cache.use_query_cache">true</property> -->
+
+        <mapping class="com.first.Student"/>
+        <mapping class="com.first.Address"/>
+        <mapping class="com.onetoone.Question"/>
+        <mapping class="com.onetoone.Answer"/>
+        <mapping class="com.onetomany.Question1"/>
+        <mapping class="com.onetomany.Answer1"/>
+        <mapping class="com.manytomany.Emp"/>
+        <mapping class="com.manytomany.Project"/>
+        <mapping resource="xml_mapping/Person.hbm.xml"/>
+
+
+
+
+    </session-factory>
+</hibernate-configuration>
