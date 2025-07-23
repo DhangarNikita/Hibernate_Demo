@@ -11,7 +11,12 @@ public class FetchDemo {
 
         //get 101
         Student student = (Student) session.get(Student.class, 102);
+        //Student student = (Student) session.load(Student.class, 102);
         System.out.println(student);
+
+        //load
+        Address ad = (Address) session.load(Address.class,2);
+        System.out.println(ad.getCity());
         session.close();
         factory.close();
 
