@@ -1,6 +1,5 @@
 package com.cache;
 
-
 import com.first.Student;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -14,8 +13,8 @@ public class SecondLevel {
         Student student1 = session1.get(Student.class, 102);
         System.out.println(student1);
         session1.close();
-
         Session session2 = factory.openSession();
+
         /// second
         Student student2 = session2.get(Student.class, 102);
         System.out.println(student2);

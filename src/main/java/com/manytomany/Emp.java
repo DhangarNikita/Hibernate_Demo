@@ -1,7 +1,7 @@
 package com.manytomany;
 
-import jakarta.persistence.*;
 
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -11,13 +11,13 @@ public class Emp {
     private String name;
     @ManyToMany
     @JoinTable(
-            name="emp_learn",
-            joinColumns = {@JoinColumn(name="eid")},
-            inverseJoinColumns = {@JoinColumn(name="pid")}
+            name = "emp_learn",
+            joinColumns = {@JoinColumn(name = "eid")},
+            inverseJoinColumns = {@JoinColumn(name = "pid")}
     )
     private List<Project> project;
 
-    public Emp(){
+    public Emp() {
 
     }
 

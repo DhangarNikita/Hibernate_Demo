@@ -1,8 +1,8 @@
 package com.first;
 
-import jakarta.persistence.Cacheable;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import javax.persistence.Cacheable;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -10,6 +10,11 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 @Entity
 @Cacheable
 @Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
+/*@org.hibernate.annotations.Cache(
+        usage = CacheConcurrencyStrategy.READ_WRITE, //Redis Cache
+        region = "student"
+)*/
+
 public class Student {
 
     @Id

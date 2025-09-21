@@ -1,6 +1,6 @@
 package com.first;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 import java.util.Date;
 

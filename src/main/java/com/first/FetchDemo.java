@@ -13,6 +13,7 @@ public class FetchDemo {
         Student student = (Student) session.get(Student.class, 102);
         //Student student = (Student) session.load(Student.class, 102);
         System.out.println(student);
+       // session.get(Student.class,101);
 
         //load
         Address ad = (Address) session.load(Address.class,2);

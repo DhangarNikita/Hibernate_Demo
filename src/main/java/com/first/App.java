@@ -53,7 +53,6 @@ public class App {
         ad1.setX(12547.3254);
 
 
-
         FileInputStream file = new FileInputStream("src/main/java/Demo.png");  //image
         byte[] data = new byte[file.available()];
         file.read(data);

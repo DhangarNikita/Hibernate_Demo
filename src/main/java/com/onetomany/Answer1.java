@@ -1,6 +1,6 @@
 package com.onetomany;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 public class Answer1 {

@@ -20,10 +20,10 @@ public class Cascading {
         q1.setQuestionId(202);
         q1.setQuestion("What is jvm");
 
-        Answer1 a1 =new Answer1(11,"jvm stands for java virtual machine",q1);
-        Answer1 a2 =new Answer1(12,"is a platform dependent",q1);
+        Answer1 a1 = new Answer1(11, "jvm stands for java virtual machine", q1);
+        Answer1 a2 = new Answer1(12, "is a platform dependent", q1);
 
-        List<Answer1> list =new ArrayList<>();
+        List<Answer1> list = new ArrayList<>();
         list.add(a1);
         list.add(a2);
 

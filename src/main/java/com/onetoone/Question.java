@@ -1,6 +1,6 @@
 package com.onetoone;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 public class Question {

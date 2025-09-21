@@ -13,7 +13,7 @@ public class Person {
         this.phone = phone;
     }
 
-    public Person(){
+    public Person() {
 
     }
 
