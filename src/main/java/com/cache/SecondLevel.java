@@ -13,6 +13,7 @@ public class SecondLevel {
         Student student1 = session1.get(Student.class, 102);
         System.out.println(student1);
         session1.close();
+
         Session session2 = factory.openSession();
 
         /// second

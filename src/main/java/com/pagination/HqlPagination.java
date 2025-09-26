@@ -14,10 +14,11 @@ public class HqlPagination {
         SessionFactory factory = new Configuration().configure().buildSessionFactory();
         Session session = factory.openSession();
 
-        String query ="select from student";
+        String query ="from Student";
         Query q = (Query) session.createQuery(query);
         q.setFirstResult(0);
         q.setMaxResults(5);
+
 
         List<Student> list = q.list();
         for(Student st: list){
@@ -25,6 +26,5 @@ public class HqlPagination {
         }
         session .close();
         factory.close();
-
     }
 }
